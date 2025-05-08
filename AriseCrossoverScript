@@ -1,0 +1,15 @@
+local VirtualUser = game:GetService('VirtualUser')
+ 
+game:GetService('Players').LocalPlayer.Idled:Connect(function()
+    VirtualUser:CaptureController()
+    VirtualUser:ClickButton2(Vector2.new())
+end)
+ 
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Anti Kick 20 Min Done !",
+    Text = "Create By NgTien Phat",
+    Button1 = "Thanks",
+    Duration = 5
+})
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/JustLevel/goombahub/main/AriseCrossover.lua"))()
